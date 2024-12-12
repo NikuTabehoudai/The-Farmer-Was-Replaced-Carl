@@ -1,5 +1,9 @@
-def theLoop(power, carrot,wood,hay):
-	while theLoopCheck(power, carrot,wood,hay):
+def theLoop(pumpkin,power,carrot,wood,hay):
+	while theLoopCheck(pumpkin,power,carrot,wood,hay):
+		while num_items(Items.Pumpkin) < pumpkin:
+			if field(Entities.Pumpkin) == False:
+				break
+		
 		while num_items(Items.Power) < power:
 			if field(Entities.Sunflower) == False:
 				break

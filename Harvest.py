@@ -22,3 +22,16 @@ def harvestSunflowers(unsortedList):
 	for i in sortedList:
 		goto(i[0],i[1])
 		harvest()
+
+def harvestPumpkin():
+	goto(0,0)
+	while True:
+		if get_entity_type() == None:
+			while not can_harvest():
+				plant(Entities.Pumpkin)
+				use_item(Items.Fertilizer)
+		
+		if atTopRight():
+			harvest()
+			break
+		moveNext()		

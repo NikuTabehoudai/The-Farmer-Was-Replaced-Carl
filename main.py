@@ -1,7 +1,9 @@
-targetCarrots = 350
-targetWood = 100
-targetHay = 100
-targetPower = 100
+clear()
+targetPumpkins = 4000
+targetCarrots = 1000
+targetWood = 3000
+targetHay = 200
+targetPower = 500
 
-theLoop(targetPower, targetCarrots, targetWood, targetHay)
+theLoop(targetPumpkins, targetPower, targetCarrots, targetWood, targetHay)
 	

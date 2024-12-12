@@ -11,7 +11,7 @@ def enoughForSeeds(type):
 		return False
 		
 	if type == Entities.Pumpkin:
-		if num_items(Items.Carrot) > fs:
+		if num_items(Items.Carrot) > fs * 2:
 			return True
 		return False
 		

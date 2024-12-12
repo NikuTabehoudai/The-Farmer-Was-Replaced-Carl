@@ -27,6 +27,8 @@ def field(type):
 	
 	if type ==  Entities.Sunflower:
 		harvestSunflowers(fieldList)
+	elif type == Entities.Pumpkin:
+		harvestPumpkin()
 	else:
 		harvestField(type)
 		

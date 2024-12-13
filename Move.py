@@ -1,22 +1,22 @@
 def moveNext():
 	wc = get_world_size() - 1
 	if get_pos_y() == wc:
-		moveNorth()
-		moveEast()
+		move(North)
+		move(East)
 	else:
-		moveNorth()
+		move(North)
 			
-def moveNorth():
-	move(North)
+#def moveNorth():
+#	move(North)
 
-def moveEast():
-	move(East)
+#def moveEast():
+#	move(East)
 
-def moveSouth():
-	move(South)
+#def moveSouth():
+#	move(South)
 	
-def moveWest():
-	move(West)
+#def moveWest():
+#	move(West)
 
 def goto(x, y):
     yDist = get_pos_y() - y  
@@ -24,11 +24,11 @@ def goto(x, y):
     halfWorldSize = get_world_size()/2
     while get_pos_y() != y:
         if yDist >= halfWorldSize or (-halfWorldSize <= yDist and yDist < 0):
-            moveNorth()
+            move(North)
         else:
-            moveSouth()
+            move(South)
     while get_pos_x() != x:
         if xDist >= halfWorldSize or (-halfWorldSize <= xDist and xDist < 0):
-            moveEast()
+            move(East)
         else:
-            moveWest()
+            move(West)

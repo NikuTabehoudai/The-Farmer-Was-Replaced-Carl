@@ -1,9 +1,9 @@
 clear()
-targetCactus = 2000
+targetCactus = 8000
 targetPumpkins = 1000
-targetCarrots = 1000
-targetWood = 3000
-targetHay = 200
+targetCarrots = 3000
+targetWood = 4000
+targetHay = 2000
 targetPower = 500
 
 theLoop(targetCactus, targetPumpkins, targetPower, targetCarrots, targetWood, targetHay)

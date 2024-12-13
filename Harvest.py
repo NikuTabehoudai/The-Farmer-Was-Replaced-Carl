@@ -34,4 +34,23 @@ def harvestPumpkin():
 		if atTopRight():
 			harvest()
 			break
-		moveNext()		
+		moveNext()
+
+def harvestCactus():
+	goto(0,0)
+	swapped = False
+	wsl = get_world_size() -1
+	while True:
+		if measure() > measure(North) and not get_pos_y() == wsl:
+			swap(North)
+			swapped = True
+		if measure() > measure(East) and not get_pos_x() == wsl:
+			swap(East)
+			swapped = True
+			
+		if atTopRight():
+			if not swapped:
+				break
+			swapped = False
+		moveNext()
+	harvest()		

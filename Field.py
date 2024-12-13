@@ -10,7 +10,7 @@ def field(type):
 	
 	while True:	
 		makeSoil(soil)
-		if not type == Entities.Grass:
+		if not type == Entities.Grass and not type == Entities.Cactus:
 			water(waterAmount)
 		if type == Entities.Tree:
 			plantTrees()
@@ -29,6 +29,8 @@ def field(type):
 		harvestSunflowers(fieldList)
 	elif type == Entities.Pumpkin:
 		harvestPumpkin()
+	elif type ==  Entities.Cactus:
+		harvestCactus()
 	else:
 		harvestField(type)
 		

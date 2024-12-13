@@ -7,6 +7,9 @@ def needsSoil(type):
 		
 	if type == Entities.Pumpkin:
 		return True
+	
+	if type == Entities.Cactus:
+		return True
 
 def makeSoil(soil):
 	if soil:

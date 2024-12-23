@@ -1,5 +1,9 @@
-def theLoop(gold, cactus, pumpkin, power, carrot, wood, hay):
-	while theLoopCheck(gold, cactus, pumpkin, power, carrot, wood, hay):
+def theLoop(bone, gold, cactus, pumpkin, power, carrot, wood, hay):
+	while theLoopCheck(bone, gold, cactus, pumpkin, power, carrot, wood, hay):
+		while num_items(Items.Bone) < bone:
+			if dino() == False:
+				break
+		
 		while num_items(Items.Gold) < gold:
 			if maze() ==  False:
 				break

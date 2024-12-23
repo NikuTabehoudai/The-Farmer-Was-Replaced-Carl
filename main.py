@@ -1,11 +1,12 @@
 clear()
-targetGold = 4000
-targetCactus = 10000
-targetPumpkins = 1000
-targetCarrots = 7000
-targetWood = 5000
-targetHay = 8000
-targetPower = 1000
+targetBone= 64000
+targetGold = 40000
+targetCactus = 100000
+targetPumpkins = 10000
+targetCarrots = 70000
+targetWood = 50000
+targetHay = 80000
+targetPower = 10000
 
-theLoop(targetGold, targetCactus, targetPumpkins, targetPower, targetCarrots, targetWood, targetHay)
+theLoop(targetBone, targetGold, targetCactus, targetPumpkins, targetPower, targetCarrots, targetWood, targetHay)
 	

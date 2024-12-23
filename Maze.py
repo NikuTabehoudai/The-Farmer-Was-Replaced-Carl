@@ -1,6 +1,6 @@
 def maze():
 	if not enoughForSeeds(Entities.Treasure):
-		break
+		return False
 	
 	ws = get_world_size()
 	if not even(ws):
@@ -9,5 +9,5 @@ def maze():
 		
 	makeSoil(True)
 	plant(Entities.Bush)
-	use_item(Items.Weird_Substance, ws * 2)
+	use_item(Items.Weird_Substance, get_world_size() * num_unlocked(Unlocks.Mazes))
 	solveMaze()

@@ -1,27 +1,31 @@
 def enoughForSeeds(type):
 	fs = get_world_size() * get_world_size()
 	if type == Entities.Carrot:
-		if num_items(Items.Hay) > fs and num_items(Items.Wood) > fs:
+		cost = get_cost(type)
+		if num_items(Items.Hay) > cost[Items.Hay] *  fs and num_items(Items.Wood) > cost[Items.Wood] * fs:
 			return True
 		return False
 	
 	if type == Entities.Sunflower:
-		if num_items(Items.Carrot) > fs:
+		cost = get_cost(type)
+		if num_items(Items.Carrot) > cost[Items.Carrot] *  fs:
 			return True
 		return False
 		
 	if type == Entities.Pumpkin:
-		if num_items(Items.Carrot) > fs * 2:
+		cost = get_cost(type)
+		if num_items(Items.Carrot) > cost[Items.Carrot] * fs:
 			return True
 		return False
 		
 	if type == Entities.Cactus:
-		if num_items(Items.Pumpkin) > fs * 2:
+		cost = get_cost(type)
+		if num_items(Items.Pumpkin) > cost[Items.Pumpkin] * fs:
 			return True
 		return False
 		
 	if type == Entities.Treasure:
-		if num_items(Items.Weird_Substance) > get_world_size():
+		if num_items(Items.Weird_Substance) > get_world_size() * num_unlocked(Unlocks.Mazes):
 			return True
 		return False
 		

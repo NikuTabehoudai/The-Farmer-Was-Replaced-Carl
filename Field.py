@@ -25,7 +25,7 @@ def field(type):
 			break
 		moveNext()
 	
-	if type ==  Entities.Sunflower:
+	if type == Entities.Sunflower:
 		harvestSunflowers(fieldList)
 	elif type == Entities.Pumpkin:
 		harvestPumpkin()

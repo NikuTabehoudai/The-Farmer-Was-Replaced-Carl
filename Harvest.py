@@ -11,6 +11,7 @@ def harvestSunflowers(unsortedList):
 	while True:
 		if can_harvest():
 			break
+		do_a_flip()
 	petals = 15
 	sortedList = []
 	while petals > 6:

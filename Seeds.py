@@ -20,4 +20,9 @@ def enoughForSeeds(type):
 			return True
 		return False
 		
+	if type == Entities.Treasure:
+		if num_items(Items.Weird_Substance) > get_world_size():
+			return True
+		return False
+		
 	return True

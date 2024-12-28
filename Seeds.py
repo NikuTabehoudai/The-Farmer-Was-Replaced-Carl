@@ -14,7 +14,7 @@ def enoughForSeeds(type):
 		
 	if type == Entities.Pumpkin:
 		cost = get_cost(type)
-		if num_items(Items.Carrot) > cost[Items.Carrot] * fs:
+		if num_items(Items.Carrot) > (cost[Items.Carrot] * fs) * 2:
 			return True
 		return False
 		
@@ -26,6 +26,11 @@ def enoughForSeeds(type):
 		
 	if type == Entities.Treasure:
 		if num_items(Items.Weird_Substance) > get_world_size() * num_unlocked(Unlocks.Mazes):
+			return True
+		return False
+	
+	if type == Items.Weird_Substance:
+		if num_items(Items.Fertilizer) > fs * 2:
 			return True
 		return False
 		

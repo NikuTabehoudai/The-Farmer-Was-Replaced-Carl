@@ -14,14 +14,24 @@ def enoughItems(item, target):
 		return False
 	return True
 	
-def theLoopCheck(bone, gold, cactus, pumpkin, power, carrot, wood, hay):
-	if enoughItems(Items.Bone, bone):
-		if enoughItems(Items.Gold, gold):
-			if enoughItems(Items.Cactus, cactus):
-				if enoughItems(Items.Pumpkin, pumpkin):
-					if enoughItems(Items.Power, power):
-						if enoughItems(Items.Carrot, carrot):
-							if enoughItems(Items.Wood, wood):
-								if enoughItems(Items.Hay, hay):
-									return False
+def theLoopCheck(weird, bone, gold, cactus, pumpkin, power, carrot, wood, hay):
+	if enoughItems(Items.Weird_Substance, weird):
+		if enoughItems(Items.Bone, bone):
+			if enoughItems(Items.Gold, gold):
+				if enoughItems(Items.Cactus, cactus):
+					if enoughItems(Items.Pumpkin, pumpkin):
+						if enoughItems(Items.Power, power):
+							if enoughItems(Items.Carrot, carrot):
+								if enoughItems(Items.Wood, wood):
+									if enoughItems(Items.Hay, hay):
+										return False
+								
 	return True
+	
+	
+def thaLoopCheck(targetsdict):
+	for item in targetsdict:
+		if num_items(item) < targetsdict[item]:
+			return False
+	return True
+	

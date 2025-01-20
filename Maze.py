@@ -2,6 +2,9 @@ def maze():
 	if not enoughForSeeds(Entities.Treasure):
 		return False
 	
+	if num_items(Items.Power) < 200:
+		return False
+	
 	ws = get_world_size()
 	if not even(ws):
 		ws -=1

@@ -6,3 +6,7 @@ def atTopRight():
 def atStart():
 	if get_pos_x() == 0 and get_pos_y() == 0:
 		return True
+
+def atTop():
+	if get_pos_y() == get_world_size() -1:
+		return True

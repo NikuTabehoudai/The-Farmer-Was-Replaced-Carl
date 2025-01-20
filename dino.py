@@ -1,8 +1,11 @@
 def dino():
 	goto(0,0)
 	change_hat(Hats.Dinosaur_Hat)
-	if num_items(Items.Pumpkin) < 100:
+	if num_items(Items.Pumpkin) < 200:
 		return False	
+	
+	if num_items(Items.Power) < 200:
+		return False
 	
 	while True:
 		next = measure()

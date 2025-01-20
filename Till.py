@@ -10,6 +10,9 @@ def needsSoil(type):
 	
 	if type == Entities.Cactus:
 		return True
+	
+	if type == Entities.Grass:
+		return False
 
 def makeSoil(soil):
 	if soil:
